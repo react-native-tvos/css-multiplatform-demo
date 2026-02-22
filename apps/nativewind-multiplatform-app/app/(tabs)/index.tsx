@@ -1,13 +1,17 @@
 import { vars } from 'nativewind';
-import { View, ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Image } from 'expo-image';
+import {
+  Image,
+  View,
+  SafeAreaView,
+  ScrollView,
+} from '@/components/css-wrapped-components';
 
 import '@/global.css';
 import { ThemedText, ThemedTextType } from '@/components/themed-text';
 import { ThemedButton, ThemedButtonBehavior } from '@/components/themed-button';
 import { ThemedLink } from '@/components/themed-link';
 import { useScreenDimensions } from '@/hooks/use-screen-dimensions';
+import { useColorScheme } from 'nativewind';
 const customTheme = vars({
   '--light-theme-fg': '#ff0000',
   '--dark-theme-fg': '#00ff00',
@@ -22,6 +26,7 @@ const backgroundClassName = 'bg-(--color-background) flex-1';
 
 const App = () => {
   const { orientation } = useScreenDimensions();
+  const { colorScheme, setColorScheme } = useColorScheme();
   return (
     <View className="flex-1 justify-start items-center bg-(--color-background)">
       <SafeAreaView className={backgroundClassName}>
@@ -74,6 +79,14 @@ const App = () => {
           </ThemedText>
           <ThemedText additionalClassName="font-bold!">Bold font</ThemedText>
           <ThemedText additionalClassName="spacemono!">Custom font</ThemedText>
+          <ThemedButton
+            additionalTextClassName="text-blue-800! dark:text-blue-300!"
+            onPress={() =>
+              setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')
+            }
+          >
+            {`Press to change color scheme (currently ${colorScheme} )`}
+          </ThemedButton>
           <ThemedText additionalClassName="animate-bounce!">
             Animations!!!
           </ThemedText>

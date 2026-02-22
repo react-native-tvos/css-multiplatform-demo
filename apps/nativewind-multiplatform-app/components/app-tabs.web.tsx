@@ -6,11 +6,12 @@ import {
   TabTriggerSlotProps,
 } from 'expo-router/ui';
 import React from 'react';
-import { View } from 'react-native';
+import { View } from '@/components/css-wrapped-components';
 
 import '@/global.css';
 import { ThemedButton, ThemedButtonBehavior } from '@/components/themed-button';
 import { ThemedTextType } from '@/components/themed-text';
+import { Platform } from 'react-native';
 
 function CustomTabButton(props: TabTriggerSlotProps & { children: string }) {
   return (
@@ -52,9 +53,15 @@ export default function TabLayout() {
         <TabTrigger name="video" href="/(tabs)/video" asChild>
           <CustomTabButton>Video</CustomTabButton>
         </TabTrigger>
-        <TabTrigger name="legendlistdemo" href="/(tabs)/legendlistdemo" asChild>
-          <CustomTabButton>LegendList</CustomTabButton>
-        </TabTrigger>
+        {Platform.OS === 'android' ? null : (
+          <TabTrigger
+            name="legendlistdemo"
+            href="/(tabs)/legendlistdemo"
+            asChild
+          >
+            <CustomTabButton>LegendList</CustomTabButton>
+          </TabTrigger>
+        )}
       </TabList>
       <TabSlot />
     </Tabs>

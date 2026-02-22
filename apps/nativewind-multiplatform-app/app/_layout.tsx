@@ -9,7 +9,7 @@ import {
 } from 'react-native-reanimated';
 
 import '@/global.css';
-import { View } from 'react-native';
+import { View } from '@/components/css-wrapped-components';
 import { useScreenDimensions } from '@/hooks/use-screen-dimensions';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
