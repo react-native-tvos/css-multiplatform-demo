@@ -1,0 +1,58 @@
+diff --git a/node_modules/uniwind/dist/common/components/native/Pressable.js b/node_modules/uniwind/dist/common/components/native/Pressable.js
+index c7f4363..07803e6 100644
+--- a/node_modules/uniwind/dist/common/components/native/Pressable.js
++++ b/node_modules/uniwind/dist/common/components/native/Pressable.js
+@@ -22,6 +22,11 @@ const Pressable = exports.Pressable = (0, _utils.copyComponentProperties)(_react
+           isPressed: true
+         }).styles, typeof props.style === "function" ? props.style(state) : props.style];
+       }
++      if (state.focused) {
++        return [_native.UniwindStore.getStyles(props.className, props, {
++          isFocused: true
++        }).styles, typeof props.style === "function" ? props.style(state) : props.style];
++      }
+       return [style, typeof props.style === "function" ? props.style(state) : props.style];
+     }
+   });
+diff --git a/node_modules/uniwind/dist/module/components/native/Pressable.js b/node_modules/uniwind/dist/module/components/native/Pressable.js
+index 129f1d7..e8b85cb 100644
+--- a/node_modules/uniwind/dist/module/components/native/Pressable.js
++++ b/node_modules/uniwind/dist/module/components/native/Pressable.js
+@@ -26,6 +26,16 @@ export const Pressable = copyComponentProperties(RNPressable, (props) => {
+             typeof props.style === "function" ? props.style(state) : props.style
+           ];
+         }
++        if (state.focused) {
++          return [
++            UniwindStore.getStyles(
++              props.className,
++              props,
++              { isFocused: true }
++            ).styles,
++            typeof props.style === "function" ? props.style(state) : props.style
++          ];
++        }
+         return [style, typeof props.style === "function" ? props.style(state) : props.style];
+       }
+     }
+diff --git a/node_modules/uniwind/src/components/native/Pressable.tsx b/node_modules/uniwind/src/components/native/Pressable.tsx
+index 3c220a5..a7d9d1d 100644
+--- a/node_modules/uniwind/src/components/native/Pressable.tsx
++++ b/node_modules/uniwind/src/components/native/Pressable.tsx
+@@ -26,6 +26,16 @@ export const Pressable = copyComponentProperties(RNPressable, (props: PressableP
+                         typeof props.style === 'function' ? props.style(state) : props.style,
+                     ]
+                 }
++                if (state.focused) {
++                    return [
++                        UniwindStore.getStyles(
++                            props.className,
++                            props,
++                            { isFocused: true },
++                        ).styles,
++                        typeof props.style === 'function' ? props.style(state) : props.style,
++                    ]
++                }
+ 
+                 return [style, typeof props.style === 'function' ? props.style(state) : props.style]
+             }}

@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+@source "../../packages/expo-uniwind-components/src";
+
+@layer theme {
+  :root {
+    @variant light {
+      --color-text: #11181C;
+      --color-background: #f8f9fa;
+      --color-tint: #0a7ea4;
+      --color-green: #166534;
+      --color-red: #991b1b;
+      --color-special: #d4d4d4;
+      --color-tab-bar-background: #0a7ea4;
+      --color-tab-bar-default: #f8f9fa;
+      --color-tab-bar-selected: #fde047;
+      --scale-focus: 1.1;
+      --scale-hover: 1.1;
+      --scale-active: 1.2;
+      --light-theme-fg: #ff0000;
+      --dark-theme-fg: #ff0000;
+    }
+    @variant dark {
+      --color-text: #ECEDEE;
+      --color-background: #151718;
+      --color-tint: #88ccff;
+      --color-green: #86efac;
+      --color-red: #fca5a5;
+      --color-special: #0f172a;
+      --color-tab-bar-background: #88ccff;
+      --color-tab-bar-default: #151718;
+      --color-tab-bar-selected: #dc2626;
+      --scale-focus: 1.1;
+      --scale-hover: 1.1;
+      --scale-active: 1.2;
+      --light-theme-fg: #00ff00;
+      --dark-theme-fg: #00ff00;
+    }
+  }
+}
+
+@media native {
+  .ribbonstyle {
+    background-color: rgb(200 0 0);
+    margin: 1vw;
+    height: 8vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* The below transforms solve the serialization problem on native,
+     but do not apply correctly on web */
+  .ribbontransform1 {
+    transform: rotate(45deg);
+  }
+
+  .ribbontransform2 {
+    transform: translateX(5vw);
+  }
+
+  .ribbontransform3 {
+    transform: translateY(-3.5vw);
+  }
+}
+
+html {
+  .ribbonstyle {
+    background-color: rgb(200 0 0);
+    margin: 1vw;
+    height: 8vw;
+    justify-content: center;
+    align-items: center;
+    /* This transform causes "Uniwind Error - Failed to serialize javascript object" on native */
+    transform: rotate(45deg) translateX(2vw) translateY(-8vw);
+  }
+}
+
+.translateimage {
+    transform: translateX(3vw)
+}
+
+.scaleimage {
+    transform: scale(1.25)
+}
+.spacemono {
+    font-family: 'SpaceMono';
+}
