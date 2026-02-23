@@ -6,7 +6,8 @@ import { LegendList, SafeAreaView } from '@/components/css-wrapped-components';
 import { ThemedButton } from '@/components/themed-button';
 import { View } from 'react-native';
 
-const backgroundClassName = 'bg-(--color-background) w-full h-full';
+const backgroundClassName =
+  'bg-(--color-background) w-full h-full justify-center items-center';
 
 const data: number[] = [...Array(100).keys()];
 
@@ -14,12 +15,10 @@ const LegendListDemo: () => React.JSX.Element = () => {
   const { height } = useWindowDimensions();
   return (
     <SafeAreaView className={backgroundClassName}>
-      <View className="justify-center items-center">
-        <ThemedText type={ThemedTextType.title}>LegendList</ThemedText>
-      </View>
-      <View className="h-[70vh] w-full justify-center items-center">
+      <ThemedText type={ThemedTextType.title}>LegendList</ThemedText>
+      <View>
         <LegendList
-          className="h-[60vh] w-[70vw]"
+          className="h-[50vh] w-[20vw]"
           showsScrollIndex={false}
           keyExtractor={(item: any) => `${item}`}
           data={data}
@@ -27,7 +26,9 @@ const LegendListDemo: () => React.JSX.Element = () => {
           renderItem={({ item }: { item: number }) => {
             return (
               <View className="justify-center items-center">
-                <ThemedButton>{`Block ${item}`}</ThemedButton>
+                <ThemedButton
+                  textType={ThemedTextType.small}
+                >{`Block ${item}`}</ThemedButton>
               </View>
             );
           }}
