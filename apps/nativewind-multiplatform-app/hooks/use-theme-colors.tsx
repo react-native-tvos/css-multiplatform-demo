@@ -1,4 +1,4 @@
-import { useColorScheme } from 'react-native';
+import { useColorScheme } from 'nativewind';
 
 type ColorSchemeName = 'light' | 'dark';
 
@@ -42,7 +42,6 @@ const themeColors: {
 };
 
 export function useThemeColors() {
-  const colorScheme: ColorSchemeName =
-    useColorScheme() === 'dark' ? 'dark' : 'light';
-  return themeColors[colorScheme];
+  const { colorScheme } = useColorScheme();
+  return themeColors[colorScheme === 'unspecified' ? 'light' : colorScheme];
 }
