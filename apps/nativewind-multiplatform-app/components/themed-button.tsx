@@ -21,7 +21,7 @@ const pressableClassNames: { [key in ThemedButtonBehavior]: string } = {
     'transition-all duration-500 ' +
     'focus:border-(--color-text) ' +
     'hover:border-(--color-text) ' +
-    'active:scale-(--scale-x-active)',
+    'active:scale-(--scale-active)',
   /*
     Alternative behavior:
      This style scales the button when it is focused, hovered, or active, with a smooth 0.5 second animation.
