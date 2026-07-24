@@ -8,7 +8,6 @@ module.exports = {
     'layouts/**/*.{js,jsx,ts,tsx}',
     '../../packages/expo-rncss-components/**/*.{js,jsx,ts,tsx}',
   ],
-  presets: [require('nativewind/preset')],
   plugins: [],
   theme: {},
 };
