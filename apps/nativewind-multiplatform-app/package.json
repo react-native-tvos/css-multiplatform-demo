@@ -29,7 +29,7 @@
     "expo-splash-screen": "~55.0.5",
     "expo-status-bar": "~55.0.2",
     "expo-system-ui": "~55.0.5",
-    "@expo/rncss-components": "*",
+    "@expo/rncss-components": "workspace:*",
     "expo-video": "~55.0.5",
     "expo-web-browser": "~55.0.5",
     "nativewind": "^5.0.0-preview.2",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
-    "@react-native-tvos/config-tv": "^0.1.5",
+    "@react-native-tvos/config-tv": "^0.1.6",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/react": "~19.2.2",
     "@types/tailwindcss": "^3.1.0",
@@ -55,12 +55,5 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.2"
-  },
-  "expo": {
-    "install": {
-      "exclude": [
-        "react-native"
-      ]
-    }
   }
 }
