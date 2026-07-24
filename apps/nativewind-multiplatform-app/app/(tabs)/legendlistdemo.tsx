@@ -2,9 +2,10 @@ import { useWindowDimensions } from 'react-native';
 
 import '@/global.css';
 import { ThemedText, ThemedTextType } from '@/components/themed-text';
-import { LegendList, SafeAreaView } from '@/components/css-wrapped-components';
+import { LegendList } from '@legendapp/list';
 import { ThemedButton } from '@/components/themed-button';
 import { View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const backgroundClassName =
   'bg-(--color-background) w-full h-full justify-center items-center';
@@ -18,7 +19,6 @@ const LegendListDemo: () => React.JSX.Element = () => {
       <ThemedText type={ThemedTextType.title}>LegendList</ThemedText>
       <View>
         <LegendList
-          className="h-[50vh] w-[20vw]"
           showsScrollIndex={false}
           keyExtractor={(item: any) => `${item}`}
           data={data}

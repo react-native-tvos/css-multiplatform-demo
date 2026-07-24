@@ -1,5 +1,4 @@
-import { Text } from '@/components/css-wrapped-components';
-import { TextProps } from 'react-native';
+import { Text, TextProps } from 'react-native';
 
 import '@/global.css';
 import {

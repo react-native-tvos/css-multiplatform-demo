@@ -1,15 +1,11 @@
-import { Platform } from 'react-native';
-import {
-  SafeAreaView,
-  View,
-  VideoView,
-} from '@/components/css-wrapped-components';
+import { Platform, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import '@/global.css';
 import { ThemedText, ThemedTextType } from '@/components/themed-text';
 import { useScreenDimensions } from '@/hooks/use-screen-dimensions';
 import { useEffect, useRef, useState } from 'react';
-import { useVideoPlayer, VideoPlayerStatus } from 'expo-video';
+import { VideoView, useVideoPlayer, VideoPlayerStatus } from 'expo-video';
 import { useInterval } from '@/hooks/use-interval';
 import { ThemedButton } from '@/components/themed-button';
 

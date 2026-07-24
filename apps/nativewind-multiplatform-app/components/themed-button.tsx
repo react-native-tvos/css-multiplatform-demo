@@ -1,5 +1,4 @@
-import { GestureResponderEvent, PressableProps } from 'react-native';
-import { Pressable } from './css-wrapped-components';
+import { GestureResponderEvent, Pressable, PressableProps } from 'react-native';
 
 import '@/global.css';
 import { ThemedText, ThemedTextType } from '@/components/themed-text';
