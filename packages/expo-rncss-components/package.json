@@ -5,8 +5,22 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "source": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    },
+    "./metro": {
+      "types": "./build/metro.d.ts",
+      "default": "./build/metro.js"
+    },
+    "./entries/react-native": "./entries/react-native.cjs",
+    "./entries/*": "./build/entries/*.js",
+    "./package.json": "./package.json"
+  },
   "files": [
     "build",
+    "entries",
     "metro.js"
   ],
   "scripts": {

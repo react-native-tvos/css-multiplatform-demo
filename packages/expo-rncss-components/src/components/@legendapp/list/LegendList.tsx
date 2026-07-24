@@ -1,6 +1,6 @@
 import { useCssElement } from 'react-native-css';
 import {
-  LegendListProps,
+  type LegendListProps,
   LegendList as OriginalLegendList,
 } from '@legendapp/list';
 

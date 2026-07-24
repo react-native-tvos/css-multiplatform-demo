@@ -1,4 +1,4 @@
-import { VideoViewProps, VideoView as ExpoVideoView } from 'expo-video';
+import { type VideoViewProps, VideoView as ExpoVideoView } from 'expo-video';
 import { useCssElement } from 'react-native-css';
 
 const VideoView = (

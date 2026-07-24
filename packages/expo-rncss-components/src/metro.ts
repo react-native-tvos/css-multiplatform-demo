@@ -15,9 +15,18 @@ export function withExpoComponents(config: MetroConfig): MetroConfig {
   (config as any).resolver = {
     ...config.resolver,
     resolveRequest(context: any, moduleName: string, platform: string | null) {
-      // Skip interception for imports originating from within @expo/rncss-components
-      // to prevent circular resolution
-      if (context.originModulePath?.includes('@expo/rncss-components')) {
+      // Only redirect imports from first-party app code. Skip anything from
+      // node_modules — redirecting react-native's own internal imports (e.g.
+      // @react-native-tvos/virtualized-lists doing `import { ScrollView }`)
+      // hands library internals a CSS-wrapped component that lacks the static
+      // members / ref behavior they depend on (ScrollView.Context, etc.).
+      //
+      // Also skip this package's own files. Its real monorepo path lives under
+      // packages/ (not node_modules), so match the unscoped directory name to
+      // prevent the entry .cjs and wrapped components from redirecting their
+      // own `react-native` imports back onto themselves (circular resolution).
+      const origin = context.originModulePath ?? '';
+      if (origin.includes('node_modules') || origin.includes('rncss-components')) {
         if (originalResolveRequest) {
           return originalResolveRequest(context, moduleName, platform);
         }
