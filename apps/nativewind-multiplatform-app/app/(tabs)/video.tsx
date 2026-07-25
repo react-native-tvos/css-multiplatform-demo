@@ -28,7 +28,10 @@ export default function VideoScreen() {
   );
 }
 
-const videoSource = 'https://download.samplelib.com/mp4/sample-5s.mp4';
+const appleVideoSource =
+  'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4';
+const androidVideoSource = 'https://samplelib.com/mp4/sample-30s.mp4';
+const videoSource = Platform.OS === 'android' ? androidVideoSource : appleVideoSource;
 
 function VideoDemo() {
   const { orientation } = useScreenDimensions();
