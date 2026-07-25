@@ -2,13 +2,13 @@
   "name": "babel-plugin-expo-uniwind",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "source": "src/index.ts",
+  "main": "build/babel.js",
+  "types": "build/babel.d.ts",
+  "source": "src/babel.ts",
   "exports": {
     ".": {
-      "types": "./build/index.d.ts",
-      "default": "./build/index.js"
+      "types": "./build/babel.d.ts",
+      "default": "./build/babel.js"
     },
     "./babel": {
       "types": "./build/babel.d.ts",
@@ -37,6 +37,12 @@
     "react-native": "*",
     "react-native-safe-area-context": "*",
     "uniwind": "*"
+  },
+  "peerDependenciesMeta": {
+    "@legendapp/list": { "optional": true },
+    "expo-image": { "optional": true },
+    "expo-video": { "optional": true },
+    "react-native-safe-area-context": { "optional": true }
   },
   "devDependencies": {
     "eslint": "^9.25.0",

@@ -70,8 +70,7 @@ Because only the wrapped names are rewritten, non-wrapped exports (`Platform`, `
 
 ```
 src/
-  index.ts               # Barrel — re-exports all wrapped components
-  babel.ts               # Babel plugin (import rewrite)
+  babel.ts               # Babel plugin (import rewrite) — the package entry
   components/
     useCSSVariable.tsx    # CSS variable hook (native + web)
     react-native/         # Wrapped RN components (View, Text, etc.)
@@ -81,14 +80,19 @@ src/
     @legendapp/list/
 ```
 
+The package main (`.`) and `./babel` both resolve to the Babel plugin. The wrapped components are only reached through the plugin's import rewrites (`./components/*`), so a third-party wrapper is bundled only when the app actually imports that component.
+
 ## Peer dependencies
 
-This package expects the following to be installed in your app:
+Required:
 
 - `react` and `react-native`
 - `react-native-css`
-- `react-native-reanimated` (for Animated component wrappers)
-- `react-native-safe-area-context`
-- `expo-image`
-- `expo-video`
-- `@legendapp/list`
+
+Optional — only needed if the app uses the matching wrapped component (marked `optional` in `peerDependenciesMeta`, so apps that don't use them get no install warnings):
+
+- `react-native-reanimated` (for the `Animated*` wrappers)
+- `react-native-safe-area-context` (`SafeAreaView`)
+- `expo-image` (`Image`)
+- `expo-video` (`VideoView`)
+- `@legendapp/list` (`LegendList`)

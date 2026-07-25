@@ -58,8 +58,7 @@ Files under `node_modules` (and this package's own files) are skipped, so librar
 
 ```
 src/
-  index.ts               # Barrel — re-exports all wrapped components
-  babel.ts               # Babel plugin (import rewrite)
+  babel.ts               # Babel plugin (import rewrite) — the package entry
   components/
     react-native-safe-area-context/
     expo-image/
@@ -67,13 +66,18 @@ src/
     @legendapp/list/
 ```
 
+The package main (`.`) and `./babel` both resolve to the Babel plugin. The wrapped components are only reached through the plugin's import rewrites (`./components/*`), so a wrapper is bundled only when the app actually imports that component.
+
 ## Peer dependencies
 
-This package expects the following to be installed in your app:
+Required:
 
 - `react` and `react-native`
 - `uniwind`
-- `react-native-safe-area-context`
-- `expo-image`
-- `expo-video`
-- `@legendapp/list`
+
+Optional — only needed if the app uses the matching wrapped component (marked `optional` in `peerDependenciesMeta`, so apps that don't use them get no install warnings):
+
+- `react-native-safe-area-context` (`SafeAreaView`)
+- `expo-image` (`Image`)
+- `expo-video` (`VideoView`)
+- `@legendapp/list` (`LegendList`)
