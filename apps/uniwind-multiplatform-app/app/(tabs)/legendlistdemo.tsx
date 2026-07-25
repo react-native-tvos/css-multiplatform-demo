@@ -4,7 +4,8 @@ import '@/global.css';
 import { ThemedText, ThemedTextType } from '@/components/themed-text';
 import { ThemedButton } from '@/components/themed-button';
 import { View } from 'react-native';
-import { LegendList, SafeAreaView } from '@/components/css-wrapped-components';
+import { LegendList } from '@legendapp/list';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const backgroundClassName = 'bg-(--color-background) w-full h-full';
 

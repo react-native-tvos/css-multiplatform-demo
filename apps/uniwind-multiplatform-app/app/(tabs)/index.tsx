@@ -5,7 +5,8 @@ import { ThemedText, ThemedTextType } from '@/components/themed-text';
 import { ThemedButton, ThemedButtonBehavior } from '@/components/themed-button';
 import { ThemedLink } from '@/components/themed-link';
 import { useScreenDimensions } from '@/hooks/use-screen-dimensions';
-import { SafeAreaView, Image } from '@/components/css-wrapped-components';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Image } from 'expo-image';
 
 const imageClassNames: { [key: string]: string } = {
   portrait: 'w-[5vh] h-[5vh]',

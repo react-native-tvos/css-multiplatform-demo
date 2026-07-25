@@ -5,7 +5,7 @@ import {
   FlatList,
   TouchableHighlight,
 } from 'react-native';
-import { SafeAreaView } from '@/components/css-wrapped-components';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import '@/global.css';
 import { useScreenDimensions } from '@/hooks/use-screen-dimensions';

@@ -4,10 +4,10 @@ import '@/global.css';
 import { ThemedText, ThemedTextType } from '@/components/themed-text';
 import { useScreenDimensions } from '@/hooks/use-screen-dimensions';
 import { useEffect, useRef, useState } from 'react';
-import { useVideoPlayer, VideoPlayerStatus } from 'expo-video';
+import { VideoView, useVideoPlayer, VideoPlayerStatus } from 'expo-video';
 import { useInterval } from '@/hooks/use-interval';
 import { ThemedButton } from '@/components/themed-button';
-import { SafeAreaView, VideoView } from '@/components/css-wrapped-components';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const backgroundClassName = 'bg-(--color-background) flex-1';
 
