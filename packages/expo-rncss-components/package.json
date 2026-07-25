@@ -10,19 +10,15 @@
       "types": "./build/index.d.ts",
       "default": "./build/index.js"
     },
-    "./metro": {
-      "types": "./build/metro.d.ts",
-      "default": "./build/metro.js"
+    "./babel": {
+      "types": "./build/babel.d.ts",
+      "default": "./build/babel.js"
     },
-    "./entries/react-native": "./entries/react-native.cjs",
-    "./entries/*": "./build/entries/*.js",
     "./components/*": "./build/components/*.js",
     "./package.json": "./package.json"
   },
   "files": [
-    "build",
-    "entries",
-    "metro.js"
+    "build"
   ],
   "scripts": {
     "build": "expo-module build",
