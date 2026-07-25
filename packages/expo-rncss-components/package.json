@@ -16,6 +16,7 @@
     },
     "./entries/react-native": "./entries/react-native.cjs",
     "./entries/*": "./build/entries/*.js",
+    "./components/*": "./build/components/*.js",
     "./package.json": "./package.json"
   },
   "files": [
