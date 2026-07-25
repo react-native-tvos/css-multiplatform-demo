@@ -14,7 +14,7 @@
     "deploy": "npx expo export -p web && npx eas-cli@latest deploy"
   },
   "dependencies": {
-    "@expo/rncss-components": "workspace:*",
+    "babel-plugin-expo-rncss": "workspace:*",
     "@expo/vector-icons": "^15.0.2",
     "expo": "^57.0.8",
     "expo-build-properties": "~57.0.7",

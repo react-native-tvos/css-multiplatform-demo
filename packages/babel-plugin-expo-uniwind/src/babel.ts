@@ -5,8 +5,8 @@
  *   import { SafeAreaView } from 'react-native-safe-area-context';
  *   import { Image } from 'expo-image';
  *   // becomes
- *   import SafeAreaView from '@expo/uniwind-components/components/react-native-safe-area-context/SafeAreaView';
- *   import Image from '@expo/uniwind-components/components/expo-image/Image';
+ *   import SafeAreaView from 'babel-plugin-expo-uniwind/components/react-native-safe-area-context/SafeAreaView';
+ *   import Image from 'babel-plugin-expo-uniwind/components/expo-image/Image';
  *
  * Unlike the react-native-css equivalent, there is NO `react-native` entry:
  * Uniwind gives React Native core components (View, Text, Pressable, …)
@@ -21,7 +21,7 @@
 
 // Source module -> the named exports we replace with wrapped versions.
 // The wrapped module for `<name>` lives at
-// `@expo/uniwind-components/components/<source>/<name>`.
+// `babel-plugin-expo-uniwind/components/<source>/<name>`.
 const WRAP_MAP: Record<string, string[]> = {
   'react-native-safe-area-context': ['SafeAreaView'],
   'expo-image': ['Image'],
@@ -45,7 +45,7 @@ export default function uniwindComponentsBabelPlugin({
         const filename: string = state.file?.opts?.filename ?? '';
         if (
           filename.includes('node_modules') ||
-          filename.includes('uniwind-components')
+          filename.includes('expo-uniwind')
         ) {
           return;
         }
@@ -68,7 +68,7 @@ export default function uniwindComponentsBabelPlugin({
               t.importDeclaration(
                 [t.importDefaultSpecifier(t.identifier(spec.local.name))],
                 t.stringLiteral(
-                  `@expo/uniwind-components/components/${source}/${spec.imported.name}`,
+                  `babel-plugin-expo-uniwind/components/${source}/${spec.imported.name}`,
                 ),
               ),
             );

@@ -1,5 +1,5 @@
 {
-  "name": "@expo/uniwind-components",
+  "name": "babel-plugin-expo-uniwind",
   "version": "1.0.0",
   "license": "MIT",
   "main": "build/index.js",

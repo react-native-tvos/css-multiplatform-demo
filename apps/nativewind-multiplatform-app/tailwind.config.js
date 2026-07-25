@@ -6,7 +6,7 @@ module.exports = {
     'components/**/*.{js,jsx,ts,tsx}',
     'hooks/**/*.{js,jsx,ts,tsx}',
     'layouts/**/*.{js,jsx,ts,tsx}',
-    '../../packages/expo-rncss-components/**/*.{js,jsx,ts,tsx}',
+    '../../packages/babel-plugin-expo-rncss/**/*.{js,jsx,ts,tsx}',
   ],
   plugins: [],
   theme: {},

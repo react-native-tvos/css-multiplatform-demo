@@ -1,5 +1,5 @@
 {
-  "name": "@expo/rncss-components",
+  "name": "babel-plugin-expo-rncss",
   "version": "1.0.0",
   "license": "MIT",
   "main": "build/index.js",

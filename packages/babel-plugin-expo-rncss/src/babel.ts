@@ -5,9 +5,9 @@
  *   import { View, Platform } from 'react-native';
  *   import { SafeAreaView } from 'react-native-safe-area-context';
  *   // becomes
- *   import View from '@expo/rncss-components/components/react-native/View';
+ *   import View from 'babel-plugin-expo-rncss/components/react-native/View';
  *   import { Platform } from 'react-native';
- *   import SafeAreaView from '@expo/rncss-components/components/react-native-safe-area-context/SafeAreaView';
+ *   import SafeAreaView from 'babel-plugin-expo-rncss/components/react-native-safe-area-context/SafeAreaView';
  *
  * This is the single mechanism that swaps in the wrapped components. It replaces
  * a Metro resolver redirect for two reasons:
@@ -31,7 +31,7 @@
 
 // Source module -> the named exports we replace with CSS-wrapped versions.
 // The wrapped module for `<name>` lives at
-// `@expo/rncss-components/components/<source>/<name>`.
+// `babel-plugin-expo-rncss/components/<source>/<name>`.
 const WRAP_MAP: Record<string, string[]> = {
   'react-native': [
     'View',
@@ -65,7 +65,7 @@ export default function rncssComponentsBabelPlugin({
         const filename: string = state.file?.opts?.filename ?? '';
         if (
           filename.includes('node_modules') ||
-          filename.includes('rncss-components')
+          filename.includes('expo-rncss')
         ) {
           return;
         }
@@ -88,7 +88,7 @@ export default function rncssComponentsBabelPlugin({
               t.importDeclaration(
                 [t.importDefaultSpecifier(t.identifier(spec.local.name))],
                 t.stringLiteral(
-                  `@expo/rncss-components/components/${source}/${spec.imported.name}`,
+                  `babel-plugin-expo-rncss/components/${source}/${spec.imported.name}`,
                 ),
               ),
             );

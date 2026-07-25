@@ -18,7 +18,7 @@ config.resolver.nodeModulesPaths = [
   path.resolve(monorepoRoot, 'node_modules'),
 ];
 
-// The CSS-wrapped components are swapped in by the @expo/rncss-components babel
+// The CSS-wrapped components are swapped in by the babel-plugin-expo-rncss
 // plugin (see babel.config.js), so no custom resolver is needed here.
 module.exports = withNativewind(config, {
   inlineVariables: false,
