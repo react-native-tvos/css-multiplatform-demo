@@ -33,7 +33,7 @@ The `{ className: 'style' }` mapping tells `react-native-css` to resolve the `cl
 
 ### Babel plugin
 
-`babel-plugin-expo-rncss/babel` rewrites first-party imports of the wrapped named exports to the wrapped modules, leaving everything else on the original module:
+The plugin rewrites first-party imports of the wrapped named exports to the wrapped modules, leaving everything else on the original module:
 
 ```tsx
 import { View, Platform } from 'react-native';
@@ -50,10 +50,12 @@ module.exports = function (api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
-    plugins: ['babel-plugin-expo-rncss/babel'],
+    plugins: ['babel-plugin-expo-rncss'],
   };
 };
 ```
+
+(The `babel-plugin-expo-rncss/babel` subpath resolves to the same plugin, if you prefer to be explicit.)
 
 Disable the polyfill in `metro.config.js` so only the wrapped components get `className`:
 

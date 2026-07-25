@@ -7,6 +7,6 @@ module.exports = function (api) {
 
   return {
     presets: ['babel-preset-expo'],
-    plugins: ['babel-plugin-expo-rncss/babel'],
+    plugins: ['babel-plugin-expo-rncss'],
   };
 };

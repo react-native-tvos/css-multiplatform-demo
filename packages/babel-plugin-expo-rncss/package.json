@@ -2,13 +2,13 @@
   "name": "babel-plugin-expo-rncss",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "build/babel.js",
-  "types": "build/babel.d.ts",
-  "source": "src/babel.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "source": "src/index.ts",
   "exports": {
     ".": {
-      "types": "./build/babel.d.ts",
-      "default": "./build/babel.js"
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
     },
     "./babel": {
       "types": "./build/babel.d.ts",

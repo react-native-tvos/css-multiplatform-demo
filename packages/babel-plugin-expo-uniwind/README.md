@@ -28,7 +28,7 @@ export default withUniwind(ExpoImage);
 
 ### Babel plugin
 
-`babel-plugin-expo-uniwind/babel` rewrites first-party imports of the wrapped named exports to the wrapped modules, leaving everything else on the original module:
+The plugin rewrites first-party imports of the wrapped named exports to the wrapped modules, leaving everything else on the original module:
 
 ```tsx
 import { VideoView, useVideoPlayer } from 'expo-video';
@@ -47,10 +47,12 @@ module.exports = function (api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
-    plugins: ['babel-plugin-expo-uniwind/babel'],
+    plugins: ['babel-plugin-expo-uniwind'],
   };
 };
 ```
+
+(The `babel-plugin-expo-uniwind/babel` subpath resolves to the same plugin, if you prefer to be explicit.)
 
 Files under `node_modules` (and this package's own files) are skipped, so library internals keep the real components.
 

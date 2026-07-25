@@ -8,6 +8,6 @@ module.exports = function (api) {
 
   return {
     presets: ['babel-preset-expo'],
-    plugins: ['babel-plugin-expo-uniwind/babel'],
+    plugins: ['babel-plugin-expo-uniwind'],
   };
 };
