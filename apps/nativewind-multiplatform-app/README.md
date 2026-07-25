@@ -85,7 +85,7 @@ These are shown in the [focus/hover/active demo screen](<./app/(tabs)/tvdemo.tsx
 
 ### Compatibility with third party components
 
-In NativeWind v4, the [CSSWrappedComponents.tsx](./components/CSSWrappedComponents.tsx) file demonstrated how to wrap components provided by Expo and other packages to enable them to use NativeWind class names, using [the `cssInterop()` API](https://www.nativewind.dev/api/css-interop). In NativeWind v5, this is no longer needed — components are imported directly from their original packages. The `@expo/rncss-components` package in this repository provides CSS wrappers for the components used in the app, using the `react-native-css` package, and provides a custom Metro config so that imports from `react-native` and other packages are properly redirected to those wrappers.
+In NativeWind v4, the [CSSWrappedComponents.tsx](./components/CSSWrappedComponents.tsx) file demonstrated how to wrap components provided by Expo and other packages to enable them to use NativeWind class names, using [the `cssInterop()` API](https://www.nativewind.dev/api/css-interop). In NativeWind v5, this is no longer needed — components are imported directly from their original packages. The `babel-plugin-expo-rncss` package in this repository provides CSS wrappers for the components used in the app, using the `react-native-css` package, and provides a Babel plugin so that imports from `react-native` and other packages are rewritten to those wrappers.
 
 ## Changes from SDK 55 (NativeWind v4) to v5
 
