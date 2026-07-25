@@ -11,6 +11,112 @@ importers:
 
   .: {}
 
+  apps/2048-tv:
+    dependencies:
+      '@expo/rncss-components':
+        specifier: workspace:*
+        version: link:../../packages/expo-rncss-components
+      '@expo/vector-icons':
+        specifier: ^15.0.2
+        version: 15.1.1(expo-font@57.0.1)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      expo:
+        specifier: ^57.0.8
+        version: 57.0.8(@babel/core@7.29.7)(@expo/dom-webview@55.0.6)(@expo/metro-runtime@57.0.7)(expo-router@57.0.8)(react-dom@19.2.3(react@19.2.3))(react-native-tvos@0.86.0-2)(react-native-web@0.21.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-native-worklets@0.10.0(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(react-native-tvos@0.86.0-2)(react@19.2.3))(react@19.2.3)(typescript@6.0.3)
+      expo-build-properties:
+        specifier: ~57.0.7
+        version: 57.0.7(expo@57.0.8)
+      expo-constants:
+        specifier: ~57.0.7
+        version: 57.0.7(expo@57.0.8)(react-native-tvos@0.86.0-2)
+      expo-dev-client:
+        specifier: ~57.0.9
+        version: 57.0.9(expo@57.0.8)(react-native-tvos@0.86.0-2)
+      expo-font:
+        specifier: ~57.0.1
+        version: 57.0.1(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      expo-glass-effect:
+        specifier: ~57.0.1
+        version: 57.0.1(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      expo-image:
+        specifier: ~57.0.1
+        version: 57.0.1(expo@57.0.8)(react-native-tvos@0.86.0-2)(react-native-web@0.21.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
+      expo-linear-gradient:
+        specifier: ~57.0.1
+        version: 57.0.1(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      expo-linking:
+        specifier: ~57.0.4
+        version: 57.0.4(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      expo-router:
+        specifier: ~57.0.8
+        version: 57.0.8(14f2a22e55e133b3671f5e5f17168d0b)
+      expo-splash-screen:
+        specifier: ~57.0.5
+        version: 57.0.5(expo@57.0.8)(typescript@6.0.3)
+      expo-status-bar:
+        specifier: ~57.0.1
+        version: 57.0.1(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      expo-symbols:
+        specifier: ~57.0.1
+        version: 57.0.1(expo-font@57.0.1)(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      expo-system-ui:
+        specifier: ~57.0.1
+        version: 57.0.1(expo@57.0.8)(react-native-tvos@0.86.0-2)(react-native-web@0.21.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
+      expo-web-browser:
+        specifier: ~57.0.2
+        version: 57.0.2(expo@57.0.8)(react-native-tvos@0.86.0-2)
+      nativewind:
+        specifier: 5.0.0-preview.4
+        version: 5.0.0-preview.4(react-native-css@3.0.7(@expo/metro-config@57.0.7(expo@57.0.8)(typescript@6.0.3))(lightningcss@1.30.1)(react-native-tvos@0.86.0-2)(react@19.2.3))(tailwindcss@4.3.3)
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      react-dom:
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
+      react-native:
+        specifier: npm:react-native-tvos@0.86.0-2
+        version: react-native-tvos@0.86.0-2(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(@types/react@19.2.17)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      react-native-css:
+        specifier: ^3.0.7
+        version: 3.0.7(@expo/metro-config@57.0.7(expo@57.0.8)(typescript@6.0.3))(lightningcss@1.30.1)(react-native-tvos@0.86.0-2)(react@19.2.3)
+      react-native-gesture-handler:
+        specifier: ~2.32.0
+        version: 2.32.0(react-native-tvos@0.86.0-2)(react@19.2.3)
+      react-native-reanimated:
+        specifier: ~4.5.0
+        version: 4.5.0(react-native-tvos@0.86.0-2)(react-native-worklets@0.10.0(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(react-native-tvos@0.86.0-2)(react@19.2.3))(react@19.2.3)
+      react-native-safe-area-context:
+        specifier: ~5.7.0
+        version: 5.7.0(react-native-tvos@0.86.0-2)(react@19.2.3)
+      react-native-screens:
+        specifier: ~4.26.2
+        version: 4.26.2(react-native-tvos@0.86.0-2)(react@19.2.3)
+      react-native-web:
+        specifier: ^0.21.0
+        version: 0.21.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react-native-worklets:
+        specifier: 0.10.0
+        version: 0.10.0(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(react-native-tvos@0.86.0-2)(react@19.2.3)
+    devDependencies:
+      '@react-native-tvos/config-tv':
+        specifier: ^0.1.6
+        version: 0.1.6(expo@57.0.8)
+      '@tailwindcss/postcss':
+        specifier: ^4.3.3
+        version: 4.3.3
+      '@types/react':
+        specifier: ~19.2.2
+        version: 19.2.17
+      postcss:
+        specifier: ^8.5.22
+        version: 8.5.23
+      tailwindcss:
+        specifier: ^4.3.3
+        version: 4.3.3
+      typescript:
+        specifier: ~6.0.3
+        version: 6.0.3
+
   apps/nativewind-multiplatform-app:
     dependencies:
       '@expo/metro-runtime':
@@ -3249,6 +3355,13 @@ packages:
     peerDependencies:
       expo: '*'
       react: '*'
+
+  expo-linear-gradient@57.0.1:
+    resolution: {integrity: sha512-CpS8eMqoIWcHVGKV66zbDvzotCw9qYp3f8CuI9N+h1LaO0tMLUzBpkhAKePUsXlpN3yolYlHFSPkfVZ/uSh+iA==}
+    peerDependencies:
+      expo: '*'
+      react: '*'
+      react-native: '*'
 
   expo-linking@57.0.4:
     resolution: {integrity: sha512-e1alfHNJdywIfJkCuKMc6M3hBfAGPd2gKMeF/6V7qwFWzHCS2mTBqU+KaO4FLpltA5Nt6CYEx6zmUlGfUF+8lA==}
@@ -9829,6 +9942,12 @@ snapshots:
     dependencies:
       expo: 57.0.8(@babel/core@7.29.7)(@expo/dom-webview@55.0.6)(@expo/metro-runtime@57.0.7)(expo-router@57.0.8)(react-dom@19.2.3(react@19.2.3))(react-native-tvos@0.86.0-2)(react-native-web@0.21.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-native-worklets@0.10.0(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(react-native-tvos@0.86.0-2)(react@19.2.3))(react@19.2.3)(typescript@6.0.3)
       react: 19.2.3
+
+  expo-linear-gradient@57.0.1(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3):
+    dependencies:
+      expo: 57.0.8(@babel/core@7.29.7)(@expo/dom-webview@55.0.6)(@expo/metro-runtime@57.0.7)(expo-router@57.0.8)(react-dom@19.2.3(react@19.2.3))(react-native-tvos@0.86.0-2)(react-native-web@0.21.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-native-worklets@0.10.0(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(react-native-tvos@0.86.0-2)(react@19.2.3))(react@19.2.3)(typescript@6.0.3)
+      react: 19.2.3
+      react-native: react-native-tvos@0.86.0-2(@babel/core@7.29.7)(@react-native/metro-config@0.86.0(@babel/core@7.29.7))(@types/react@19.2.17)(react-native-tvos@0.86.0-2)(react@19.2.3)
 
   expo-linking@57.0.4(expo@57.0.8)(react-native-tvos@0.86.0-2)(react@19.2.3):
     dependencies:
