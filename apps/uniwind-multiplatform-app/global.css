@@ -1,7 +1,12 @@
 @import 'tailwindcss';
 @import 'uniwind';
 
-@source "../../packages/expo-uniwind-components/src";
+/* Register the bundled font as a Tailwind theme token so it is exposed as a
+   real `font-spacemono` utility (which supports the `!` important modifier),
+   rather than a raw `.spacemono` class the modifier can't attach to. */
+@theme {
+  --font-spacemono: 'SpaceMono';
+}
 
 @layer theme {
   :root {
@@ -82,7 +87,4 @@ html {
 
 .scaleimage {
     transform: scale(1.25)
-}
-.spacemono {
-    font-family: 'SpaceMono';
 }
