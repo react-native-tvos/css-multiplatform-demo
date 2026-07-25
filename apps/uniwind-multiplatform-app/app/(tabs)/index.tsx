@@ -66,7 +66,7 @@ const App = () => {
             Text with custom CSS variables
           </ThemedText>
           <ThemedText additionalClassName="font-bold!">Bold font</ThemedText>
-          <ThemedText additionalClassName="spacemono!">Custom font</ThemedText>
+          <ThemedText additionalClassName="font-spacemono!">Custom font</ThemedText>
           <ThemedText additionalClassName="animate-bounce!">
             Animations!!!
           </ThemedText>
