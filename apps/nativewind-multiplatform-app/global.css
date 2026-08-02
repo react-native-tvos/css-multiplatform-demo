@@ -64,10 +64,3 @@
     transform: rotate(45deg) translateX(15vw) translateY(-20vw);
 }
 
-.translateimage {
-    transform: translateX(3vw)
-}
-
-.scaleimage {
-    transform: scale(1.25)
-}

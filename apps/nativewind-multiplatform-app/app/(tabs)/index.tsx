@@ -51,7 +51,7 @@ const App = () => {
             <View className="flex-1 justify-center items-center">
               <Image
                 source={require('@/assets/images/react-logo.png')}
-                className={`${imageClassNames[orientation]} translateimage`}
+                className={`${imageClassNames[orientation]} translate-x-[3vw]`}
               />
               <ThemedText type={ThemedTextType.tiny}>
                 translate-x-[3vw]
@@ -60,9 +60,9 @@ const App = () => {
             <View className="w-[20vw] justify-center items-center">
               <Image
                 source={require('@/assets/images/react-logo.png')}
-                className={`${imageClassNames[orientation]} scaleimage`}
+                className={`${imageClassNames[orientation]} scale-x-[1.25]`}
               />
-              <ThemedText type={ThemedTextType.tiny}>scale-x-125</ThemedText>
+              <ThemedText type={ThemedTextType.tiny}>scale-x-[1.25]</ThemedText>
             </View>
           </View>
           <ThemedText
@@ -73,7 +73,9 @@ const App = () => {
             Text with custom CSS variables
           </ThemedText>
           <ThemedText additionalClassName="font-bold!">Bold font</ThemedText>
-          <ThemedText additionalClassName="font-spacemono!">Custom font</ThemedText>
+          <ThemedText additionalClassName="font-spacemono!">
+            Custom font
+          </ThemedText>
           <ThemedText additionalClassName="animate-bounce!">
             Animations!!!
           </ThemedText>
